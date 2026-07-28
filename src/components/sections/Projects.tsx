@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ArrowRight, Layers, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Layers } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { PROJECTS_DATA } from '../../data/portfolioData';
 import { ProjectItem } from '../../types';
@@ -41,20 +41,8 @@ export const Projects: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 
-                <div className="absolute top-3 left-3">
-                  <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-brand-600/90 text-white shadow">
-                    {project.category}
-                  </span>
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
                 </div>
-
-                {project.featured && (
-                  <div className="absolute top-3 right-3">
-                    <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded bg-skyAccent-400/90 text-slate-950 flex items-center gap-1 shadow">
-                      <Sparkles className="w-3 h-3" />
-                      Featured
-                    </span>
-                  </div>
-                )}
               </div>
 
               {/* Card Body */}
