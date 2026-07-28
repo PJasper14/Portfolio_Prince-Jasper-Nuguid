@@ -12,11 +12,11 @@ export const PERSONAL_INFO = {
   degree: "Bachelor of Science in Information Technology",
   university: "Pamantasan ng Cabuyao",
   gradYear: "2026",
-  email: "princejasper.nuguid@gmail.com",
+  email: "nuguidprincejasper14@gmail.com",
   location: "Cabuyao City, Laguna, Philippines",
   github: "https://github.com/PJasper14",
-  linkedin: "https://linkedin.com/in/prince-jasper-nuguid",
-  facebook: "https://facebook.com/princejasper.nuguid",
+  linkedin: "https://www.linkedin.com/in/prince-jasper-nuguid-233b2a40b",
+  jobstreet: "https://ph.jobstreet.com/profiles/princejasper-nuguid-yk5VTFBKRT",
   summary: "A motivated Information Technology graduate from Pamantasan ng Cabuyao with a strong passion for software engineering, full-stack web development, and mobile applications. Driven by curiosity and a commitment to continuous learning, I build clean, practical digital solutions that solve real-world problems.",
   aboutNarrative: `I recently graduated with a Bachelor of Science in Information Technology from Pamantasan ng Cabuyao. Throughout my college journey, I developed a deep fascination with how code turns abstract ideas into functional, real-world solutions that improve people's everyday lives.
 
@@ -171,14 +171,34 @@ export const CERTIFICATIONS_DATA: CertificationGroup[] = [
     provider: 'Cisco',
     items: [
       {
-        title: 'Networking Essentials',
-        description: 'Comprehensive grounding in network architectures, IP addressing, routing fundamentals, and device configuration.',
-        skills: ['Computer Networking', 'IP Addressing', 'Network Protocols']
+        title: 'Computer Hardware Basics',
+        description: 'Essential PC architecture, component diagnostics, assembly, hardware maintenance, and troubleshooting protocols.',
+        skills: ['Computer Hardware', 'Diagnostics', 'Hardware Maintenance']
+      },
+      {
+        title: 'Digital Awareness',
+        description: 'Fundamental digital literacy, internet navigation principles, and emerging technology concepts.',
+        skills: ['Digital Literacy', 'Emerging Tech', 'IT Fundamentals']
+      },
+      {
+        title: 'Digital Safety and Security Awareness',
+        description: 'Online security practices, data privacy fundamentals, personal cyber hygiene, and threat awareness.',
+        skills: ['Digital Safety', 'Data Privacy', 'Cyber Hygiene']
       },
       {
         title: 'Introduction to Cybersecurity',
-        description: 'Foundational concepts in network security, threat mitigation, encryption protocols, and data protection strategies.',
+        description: 'Foundational concepts in network security, threat mitigation strategies, encryption, and defense protocols.',
         skills: ['Cybersecurity', 'Network Security', 'Threat Assessment']
+      },
+      {
+        title: 'Introduction to Internet of Things',
+        description: 'Overview of IoT ecosystems, connected devices, sensor networks, and smart technology integration.',
+        skills: ['IoT', 'Smart Devices', 'Network Integration']
+      },
+      {
+        title: 'Introduction to Modern AI',
+        description: 'Foundational understanding of modern artificial intelligence, machine learning concepts, and practical applications.',
+        skills: ['Modern AI', 'Machine Learning', 'AI Applications']
       }
     ]
   },
@@ -187,13 +207,28 @@ export const CERTIFICATIONS_DATA: CertificationGroup[] = [
     items: [
       {
         title: 'Web Development Fundamentals',
-        description: 'Core concepts in modern client-side application architecture, web standards, and HTML/CSS/JS practices.',
-        skills: ['HTML5', 'CSS3', 'JavaScript', 'Web Architecture']
+        description: 'Core web architecture, modern standards, client-side development principles, and HTML/CSS/JS practices.',
+        skills: ['Web Development', 'HTML5 & CSS3', 'JavaScript', 'Web Architecture']
       },
       {
-        title: 'Working with Data',
-        description: 'Fundamental data structures, relational database concepts, SQL queries, and data manipulation techniques.',
-        skills: ['SQL', 'Relational Databases', 'Data Modeling']
+        title: 'Cybersecurity Fundamentals',
+        description: 'Defense-in-depth principles, security frameworks, cryptography, and enterprise threat analysis.',
+        skills: ['Cybersecurity', 'Security Frameworks', 'Cryptography']
+      },
+      {
+        title: 'Information Technology Fundamentals',
+        description: 'Broad foundational mastery of computer systems, networking basics, operating systems, and data management.',
+        skills: ['IT Systems', 'Operating Systems', 'Networking Basics']
+      },
+      {
+        title: 'Artificial Intelligence Fundamentals',
+        description: 'Fundamental principles of AI models, natural language processing, computer vision, and machine intelligence.',
+        skills: ['Artificial Intelligence', 'AI Models', 'Machine Intelligence']
+      },
+      {
+        title: 'Cloud Computing Fundamentals',
+        description: 'Cloud service models (IaaS, PaaS, SaaS), virtualization, cloud security, and deployment strategies.',
+        skills: ['Cloud Computing', 'IaaS / PaaS / SaaS', 'Virtualization']
       }
     ]
   },
@@ -201,9 +236,29 @@ export const CERTIFICATIONS_DATA: CertificationGroup[] = [
     provider: 'TESDA',
     items: [
       {
-        title: 'Computer Systems Servicing (NC II)',
-        description: 'National certification covering computer assembly, OS installation, hardware troubleshooting, and network setup.',
-        skills: ['Hardware Maintenance', 'Network Configuration', 'IT Troubleshooting']
+        title: 'Developing Designs for User Experience',
+        description: 'User-centered design methodologies, UX research practices, wireframing, and usability testing.',
+        skills: ['UX Design', 'Wireframing', 'User Research']
+      },
+      {
+        title: 'Developing Designs for User Interface',
+        description: 'Visual UI layout composition, color theory, typography, design design systems, and interactive prototyping.',
+        skills: ['UI Design', 'Visual Layouts', 'Prototyping']
+      },
+      {
+        title: 'Introduction to Visual Graphic Design',
+        description: 'Core graphic design principles, digital asset creation, brand identity elements, and visual communication.',
+        skills: ['Graphic Design', 'Visual Composition', 'Digital Media']
+      },
+      {
+        title: 'Microsoft Cybersecurity Course: Security, Compliance, and Identity Fundamentals',
+        description: 'Microsoft security solutions, identity and access management (IAM), compliance standards, and cloud defense.',
+        skills: ['Microsoft Security', 'IAM', 'Compliance', 'Cloud Defense']
+      },
+      {
+        title: 'Computer System Servicing NC II',
+        description: 'National certification covering computer assembly, OS installation, network configuration, and hardware repair.',
+        skills: ['System Servicing', 'Hardware Assembly', 'Network Setup']
       }
     ]
   },
@@ -211,14 +266,9 @@ export const CERTIFICATIONS_DATA: CertificationGroup[] = [
     provider: 'Google',
     items: [
       {
-        title: 'Foundations of User Experience (UX) Design',
-        description: 'User-centered design methodologies, wireframing, usability testing, and visual design principles.',
-        skills: ['UX Design', 'Wireframing', 'User Research', 'Figma']
-      },
-      {
-        title: 'Technical Support Fundamentals',
-        description: 'Hardware diagnostics, operating system internals, customer service protocols, and IT problem resolution.',
-        skills: ['IT Support', 'System Diagnostics', 'Technical Support']
+        title: 'Google Analytics Certification',
+        description: 'Web analytics, event tracking setup, user behavior analysis, conversion measurement, and data reporting.',
+        skills: ['Google Analytics', 'Web Analytics', 'Data Reporting']
       }
     ]
   },
@@ -226,9 +276,9 @@ export const CERTIFICATIONS_DATA: CertificationGroup[] = [
     provider: 'Wadhwani',
     items: [
       {
-        title: 'Professional Entrepreneurship & Workplace Skills',
-        description: 'Workplace collaboration, agile mindset, critical problem-solving, and professional communication.',
-        skills: ['Team Collaboration', 'Problem Solving', 'Workplace Communication']
+        title: 'Job Ready: Employability Skills',
+        description: 'Professional workplace communication, team collaboration, problem-solving, and career readiness competencies.',
+        skills: ['Employability Skills', 'Team Collaboration', 'Workplace Readiness']
       }
     ]
   }
@@ -253,7 +303,7 @@ export const EDUCATION_DATA: EducationItem = {
   ],
   achievements: [
     'Successfully developed and defended capstone project on Integrated Web & Mobile Management System.',
-    'Completed 480+ hours of municipal IT internship at PESO Cabuyao – Nutrition Office.',
+    'Completed 500 hours of IT internship at PESO Cabuyao–Nutrition Office.',
     'Active participant in academic technology seminars and developer workshops.'
   ]
 };

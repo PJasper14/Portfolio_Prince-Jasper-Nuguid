@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Facebook, Mail, Code, Heart } from 'lucide-react';
+import { Github, Linkedin, Briefcase, Mail, Code, Heart } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 export const Footer: React.FC = () => {
@@ -44,13 +44,13 @@ export const Footer: React.FC = () => {
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href={PERSONAL_INFO.facebook}
+              href={PERSONAL_INFO.jobstreet}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook"
+              aria-label="JobStreet"
               className="p-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-skyAccent-400 bg-slate-200/50 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
             >
-              <Facebook className="w-4 h-4" />
+              <Briefcase className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${PERSONAL_INFO.email}`}

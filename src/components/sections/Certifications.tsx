@@ -8,11 +8,11 @@ export const Certifications: React.FC = () => {
   return (
     <section id="certifications" className="py-24 relative bg-slate-100/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <SectionHeading
           badge="Continuous Learning"
           title="Certifications & Training"
-          subtitle="Verified technical credentials and industry training completed across networking, cybersecurity, web development, UX, and IT support."
+          subtitle="Verified technical credentials and industry training completed across networking, cybersecurity, system development, UI/UX, and IT support."
         />
 
         {/* Grouped Provider Cards Grid */}

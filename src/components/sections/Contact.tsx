@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Copy, Check, ExternalLink, Github, Linkedin, Facebook, Download, MapPin, Sparkles, Clock, ArrowUpRight } from 'lucide-react';
+import { Mail, Copy, Check, ExternalLink, Github, Linkedin, Briefcase, Download, MapPin, Sparkles, Clock, ArrowUpRight } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
         <SectionHeading
           badge="Let's Connect"
           title="Get In Touch"
-          subtitle="I am actively seeking entry-level software engineering and web development opportunities. Reach out directly via email or connect across my professional networks."
+          subtitle="I am actively seeking entry-level software engineering, web development, and mobile development opportunities. Reach out directly via email or connect across my professional networks."
         />
 
         <div className="max-w-5xl mx-auto space-y-8">
@@ -91,7 +91,7 @@ export const Contact: React.FC = () => {
                     {PERSONAL_INFO.email}
                   </p>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                    Have an open software developer role, internship opportunity, or technical inquiry? My inbox is directly monitored.
+                    Have an open software developer role or other technical roles? My inbox is directly monitored.
                   </p>
                 </div>
               </div>
@@ -245,20 +245,20 @@ export const Contact: React.FC = () => {
                 <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-brand-600 dark:group-hover:text-skyAccent-400 transition-colors" />
               </a>
 
-              {/* Facebook */}
+              {/* JobStreet */}
               <a
-                href={PERSONAL_INFO.facebook}
+                href={PERSONAL_INFO.jobstreet}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-brand-500/50 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-all group flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-600/10 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <Facebook className="w-5 h-5" />
+                  <div className="p-2 rounded-lg bg-purple-600/10 text-purple-600 dark:text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <Briefcase className="w-5 h-5" />
                   </div>
                   <div>
-                    <h5 className="text-sm font-bold text-slate-900 dark:text-white">Facebook</h5>
-                    <p className="text-[11px] text-slate-500 dark:text-slate-400">Social Connection</p>
+                    <h5 className="text-sm font-bold text-slate-900 dark:text-white">JobStreet</h5>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">Career & Job Profile</p>
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-brand-600 dark:group-hover:text-skyAccent-400 transition-colors" />
