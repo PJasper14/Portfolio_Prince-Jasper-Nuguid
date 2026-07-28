@@ -9,7 +9,7 @@ const ALL_HEADLINES = [PERSONAL_INFO.primaryHeadline];
 
 const TYPING_SPEED = 55;
 const DELETING_SPEED = 30;
-const PAUSE_AFTER_TYPE = 2000;
+const PAUSE_AFTER_TYPE = 4000;
 const PAUSE_AFTER_DELETE = 400;
 
 // Driven by SKILLS_DATA — pick the 6 most defining techs by name
@@ -32,7 +32,7 @@ function useTypewriter(lines: string[]) {
           setDisplayed(current.slice(0, displayed.length + 1));
         }, TYPING_SPEED);
       } else {
-        timeout.current = setTimeout(() => setPhase('pausing'), PAUSE_AFTER_TYPE);
+        timeout.current = setTimeout(() => setPhase('deleting'), PAUSE_AFTER_TYPE);
       }
     } else if (phase === 'pausing') {
       timeout.current = setTimeout(() => setPhase('deleting'), 0);
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
             className="lg:col-span-7 flex flex-col items-start text-left"
           >
             {/* Name Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
               Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
             </h1>
 

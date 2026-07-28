@@ -5,6 +5,7 @@ import { SectionHeading } from '../ui/SectionHeading';
 import { PROJECTS_DATA } from '../../data/portfolioData';
 import { ProjectItem } from '../../types';
 import { ProjectModal } from '../ui/ProjectModal';
+import { TechIcon } from '../ui/TechIcon';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
@@ -80,8 +81,9 @@ export const Projects: React.FC = () => {
                   {project.technologies.slice(0, 4).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-200/60 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-200/60 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
                     >
+                      <TechIcon name={tech} size={10} colored />
                       {tech}
                     </span>
                   ))}
@@ -98,7 +100,7 @@ export const Projects: React.FC = () => {
                     onClick={() => setSelectedProject(project)}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-skyAccent-400 hover:underline"
                   >
-                    <span>View Case Study</span>
+                    <span>View</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 

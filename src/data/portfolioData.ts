@@ -1,7 +1,7 @@
 import { CertificationGroup, EducationItem, ExperienceItem, ProjectItem, SkillItem } from '../types';
 
 export const PERSONAL_INFO = {
-  name: "Prince Jasper G. Nuguid",
+  name: "Prince Jasper Nuguid",
   primaryHeadline: "Aspiring Software Engineer | Information Technology Graduate",
   degree: "Bachelor of Science in Information Technology",
   university: "Pamantasan ng Cabuyao",
@@ -87,7 +87,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
       'Designed official digital graphic announcements, infographics, and event collateral for public community programs.',
       'Authored detailed user documentation, administrative operating procedures, and technical logs for office personnel.'
     ],
-    technologies: ['React', 'PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Figma', 'Technical Writing']
+    technologies: ['React', 'PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Figma']
   }
 ];
 

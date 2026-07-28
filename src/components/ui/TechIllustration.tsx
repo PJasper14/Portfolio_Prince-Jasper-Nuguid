@@ -6,7 +6,7 @@ import { SiLaravel, SiReact, SiMysql } from 'react-icons/si';
 // Code lines to type out one by one
 const CODE_LINES = [
   { type: 'open',    text: "const softwareEngineer = {" },
-  { type: 'field',   key: 'name',        value: "'Prince Jasper G. Nuguid'" },
+  { type: 'field',   key: 'name',        value: "'Prince Jasper Nuguid'" },
   { type: 'field',   key: 'degree',      value: "'BSIT — Pamantasan ng Cabuyao'" },
   { type: 'field',   key: 'stack',       value: "['React', 'Next.js', 'Laravel', 'React Native', 'MySQL']" },
   { type: 'field',   key: 'focus',       value: "'Creating impact through code'" },

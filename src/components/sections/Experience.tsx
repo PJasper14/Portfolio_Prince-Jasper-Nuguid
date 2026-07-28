@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, CheckCircle2, Building2 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { EXPERIENCE_DATA } from '../../data/portfolioData';
+import { TechIcon } from '../ui/TechIcon';
 
 export const Experience: React.FC = () => {
   return (
@@ -78,8 +79,9 @@ export const Experience: React.FC = () => {
                   {exp.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-slate-200/60 dark:bg-slate-800 text-slate-800 dark:text-slate-200"
+                      className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-slate-200/60 dark:bg-slate-800 text-slate-800 dark:text-slate-200"
                     >
+                      <TechIcon name={tech} size={11} colored />
                       {tech}
                     </span>
                   ))}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Github, CheckCircle2, AlertTriangle, Lightbulb, Layers, Code } from 'lucide-react';
 import { ProjectItem } from '../../types';
+import { TechIcon } from './TechIcon';
 
 interface ProjectModalProps {
   project: ProjectItem | null;
@@ -181,8 +182,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700"
                   >
+                    <TechIcon name={tech} size={12} colored />
                     {tech}
                   </span>
                 ))}
