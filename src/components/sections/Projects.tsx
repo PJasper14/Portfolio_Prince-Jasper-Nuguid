@@ -98,10 +98,14 @@ export const Projects: React.FC = () => {
                 <div className="pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-skyAccent-400 hover:underline"
+                    className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold
+                      text-brand-600 dark:text-skyAccent-400
+                      border border-brand-500/30 dark:border-skyAccent-400/30
+                      hover:bg-brand-600 hover:text-white dark:hover:bg-skyAccent-400 dark:hover:text-slate-900
+                      transition-all duration-200 active:scale-95"
                   >
                     <span>View</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </button>
 
                   <div className="flex items-center gap-2">

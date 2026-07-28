@@ -44,7 +44,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl glass-panel bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl z-10 text-slate-800 dark:text-slate-200"
+          className="relative w-full max-w-4xl max-h-[90vh] rounded-2xl glass-panel bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl z-10 text-slate-800 dark:text-slate-200 overflow-hidden"
         >
           {/* Close Button */}
           <button
@@ -54,6 +54,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           >
             <X className="w-5 h-5" />
           </button>
+
+          {/* Scrollable inner */}
+          <div className="overflow-y-auto max-h-[90vh] modal-scroll">
 
           {/* Hero Image / Banner */}
           <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-slate-950">
@@ -214,6 +217,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
 
           </div>
+          </div>{/* end modal-scroll inner */}
         </motion.div>
       </div>
     </AnimatePresence>

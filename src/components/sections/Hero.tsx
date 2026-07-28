@@ -6,6 +6,7 @@ import { TechIllustration } from '../ui/TechIllustration';
 import { TechIcon, TECH_ICON_MAP } from '../ui/TechIcon';
 
 const ALL_HEADLINES = [PERSONAL_INFO.primaryHeadline];
+const NAME_TEXT = PERSONAL_INFO.name;
 
 const TYPING_SPEED = 55;
 const DELETING_SPEED = 30;
@@ -17,10 +18,10 @@ const CORE_TECH_NAMES = ['React', 'Next.js', 'Laravel', 'React Native', 'MySQL']
 const CORE_TECHS = SKILLS_DATA.filter(s => CORE_TECH_NAMES.includes(s.name))
   .sort((a, b) => CORE_TECH_NAMES.indexOf(a.name) - CORE_TECH_NAMES.indexOf(b.name));
 
-function useTypewriter(lines: string[]) {
+function useTypewriter(lines: string[], typingSpeed = TYPING_SPEED, pauseAfterType = PAUSE_AFTER_TYPE) {
   const [displayed, setDisplayed] = useState('');
   const [lineIndex, setLineIndex] = useState(0);
-  const [phase, setPhase] = useState<'typing' | 'pausing' | 'deleting' | 'waiting'>('typing');
+  const [phase, setPhase] = useState<'typing' | 'deleting' | 'waiting'>('typing');
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -30,12 +31,10 @@ function useTypewriter(lines: string[]) {
       if (displayed.length < current.length) {
         timeout.current = setTimeout(() => {
           setDisplayed(current.slice(0, displayed.length + 1));
-        }, TYPING_SPEED);
+        }, typingSpeed);
       } else {
-        timeout.current = setTimeout(() => setPhase('deleting'), PAUSE_AFTER_TYPE);
+        timeout.current = setTimeout(() => setPhase('deleting'), pauseAfterType);
       }
-    } else if (phase === 'pausing') {
-      timeout.current = setTimeout(() => setPhase('deleting'), 0);
     } else if (phase === 'deleting') {
       if (displayed.length > 0) {
         timeout.current = setTimeout(() => {
@@ -54,13 +53,18 @@ function useTypewriter(lines: string[]) {
     return () => {
       if (timeout.current) clearTimeout(timeout.current);
     };
-  }, [displayed, phase, lineIndex, lines]);
+  }, [displayed, phase, lineIndex, lines, typingSpeed, pauseAfterType]);
 
-  return { displayed, isTyping: phase === 'typing' || phase === 'pausing' };
+  return { displayed, isTyping: phase === 'typing' };
 }
 
 export const Hero: React.FC = () => {
   const { displayed, isTyping } = useTypewriter(ALL_HEADLINES);
+  const { displayed: displayedName, isTyping: isTypingName } = useTypewriter(
+    [NAME_TEXT],
+    45,   // slightly faster for the name
+    4000
+  );
 
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
@@ -92,7 +96,15 @@ export const Hero: React.FC = () => {
           >
             {/* Name Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
-              Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
+              Hi, I'm{' '}
+              <span className="gradient-text">
+                {displayedName}
+                <span
+                  className={`inline-block w-[3px] h-[0.85em] ml-0.5 align-middle bg-gradient-to-b from-skyAccent-400 to-brand-600 rounded-sm ${
+                    isTypingName ? 'opacity-100' : 'animate-pulse'
+                  }`}
+                />
+              </span>
             </h1>
 
             {/* Typewriter Sub-headline */}

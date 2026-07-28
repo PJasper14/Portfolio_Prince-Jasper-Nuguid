@@ -11,11 +11,13 @@ import { Projects } from './components/sections/Projects';
 import { Certifications } from './components/sections/Certifications';
 import { Education } from './components/sections/Education';
 import { Contact } from './components/sections/Contact';
+import { CursorTrail } from './components/ui/CursorTrail';
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
       <div className="min-h-screen flex flex-col bg-lightBg-50 dark:bg-darkBg-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
+        <CursorTrail />
         {/* Navigation Bar */}
         <Navbar />
 
