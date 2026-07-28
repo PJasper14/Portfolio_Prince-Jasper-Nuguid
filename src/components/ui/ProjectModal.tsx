@@ -67,9 +67,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <span className="inline-block px-3 py-1 mb-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-brand-600 text-white shadow-md">
-                {project.category}
-              </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                 {project.title}
               </h3>
