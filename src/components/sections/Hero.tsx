@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, GraduationCap } from 'lucide-react';
+import { ArrowRight, GraduationCap } from 'lucide-react';
 import { PERSONAL_INFO, SKILLS_DATA } from '../../data/portfolioData';
 import { TechIllustration } from '../ui/TechIllustration';
 import { TechIcon, TECH_ICON_MAP } from '../ui/TechIcon';
@@ -160,26 +160,6 @@ export const Hero: React.FC = () => {
               >
                 <span>View Featured Projects</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
-
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScroll('contact');
-                }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-800 dark:text-slate-100 bg-slate-200/80 dark:bg-slate-800/80 hover:bg-slate-300 dark:hover:bg-slate-700 border border-slate-300/50 dark:border-slate-700/50 transition-all duration-200 active:scale-95"
-              >
-                <Download className="w-4 h-4 text-brand-600 dark:text-skyAccent-400" />
-                <span>Download Resume</span>
-              </a>
-
-              <button
-                onClick={() => handleScroll('contact')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Contact Me</span>
               </button>
             </div>
 

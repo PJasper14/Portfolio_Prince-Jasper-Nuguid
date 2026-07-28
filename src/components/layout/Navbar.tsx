@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Menu, X, Download, Code2 } from 'lucide-react';
+import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const NAV_LINKS = [
@@ -129,15 +129,6 @@ export const Navbar: React.FC = () => {
                 <Moon className="w-4 h-4 text-brand-600" />
               )}
             </button>
-
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-500 hover:to-brand-600 shadow-md shadow-brand-600/20 hover:shadow-glow-primary transition-all duration-200 active:scale-95"
-            >
-              <Download className="w-3.5 h-3.5" />
-              Resume
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -184,16 +175,6 @@ export const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
-                <a
-                  href="#contact"
-                  onClick={(e) => handleNavClick(e, '#contact')}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-brand-600"
-                >
-                  <Download className="w-4 h-4" />
-                  Get Resume
-                </a>
-              </div>
             </div>
           </motion.div>
         )}
