@@ -61,11 +61,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'py-3 glass-panel shadow-lg dark:shadow-slate-950/50'
           : 'py-5 bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -99,11 +98,10 @@ export const Navbar: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all relative ${
-                    isActive
+                  className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all relative ${isActive
                       ? 'text-white'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
+                    }`}
                 >
                   {isActive && (
                     <motion.div

@@ -90,7 +90,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: 'integrated-mgmt-system',
-    title: 'Integrated Web & Mobile Management System',
+    title: 'Integrated Web & Mobile EPOL Management System',
     tagline: 'Comprehensive enterprise operational suite with biometric authentication and geofenced attendance tracking.',
     category: 'Full-Stack & Mobile',
     featured: true,
@@ -138,7 +138,53 @@ export const PROJECTS_DATA: ProjectItem[] = [
     technologies: ['React', 'PHP / Laravel', 'MySQL', 'Tailwind CSS', 'Figma'],
     challenges: 'Designing a simple user interface accessible for residents of all digital literacy levels, while ensuring administrative security for municipal records.',
     lessonsLearned: 'Gained invaluable domain experience in civic technology, user experience (UX) simplification, government administrative workflows, and input sanitization for public web forms.',
-    githubUrl: 'https://github.com/PJasper14',
+    githubUrl: 'https://github.com/PJasper14/SalaManagementSystem',
+    liveUrl: '#'
+  },
+  {
+    id: 'coffee-shop-sap',
+    title: 'SAP Coffee Shop Management System',
+    tagline: 'Point-of-sale and inventory management solution built for a local coffee shop business.',
+    category: 'Desktop Application',
+    featured: true,
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80',
+    overview: 'A business management application designed for a local coffee shop, providing streamlined order processing, inventory tracking, and sales reporting in a single integrated desktop solution.',
+    problem: 'Local coffee shops operating manually struggle with inefficient order taking, inaccurate inventory counts, and no clear visibility into daily sales performance or profit trends.',
+    solution: 'Developed a complete point-of-sale and back-office management system that digitizes order processing, automates inventory deduction per sale, and generates visual sales reports for the business owner.',
+    features: [
+      'Point-of-sale interface for fast order entry and billing',
+      'Product catalog management with category organization',
+      'Real-time inventory deduction and low-stock alerts',
+      'Daily, weekly, and monthly sales reports with visual charts',
+      'Transaction history and receipt generation'
+    ],
+    technologies: ['Java', 'MySQL', 'NetBeans IDE', 'JFreeChart'],
+    challenges: 'Designing an intuitive POS interface that non-technical staff could operate efficiently under high-volume rush hours, while maintaining accurate inventory synchronization after every transaction.',
+    lessonsLearned: 'Strengthened understanding of Java desktop GUI development, relational database design for transactional systems, and applying business process analysis to real-world software requirements.',
+    githubUrl: 'https://github.com/PJasper14/SAP_CoffeShop_Nuguid',
+    liveUrl: '#'
+  },
+  {
+    id: 'spotmap',
+    title: 'SpotMap – Child Malnutrition Mapping System',
+    tagline: 'Interactive geospatial mapping tool for tracking and visualizing child malnutrition status in communities.',
+    category: 'Web Application',
+    featured: true,
+    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80',
+    overview: 'A web-based geographic mapping system developed during internship at PESO Cabuyao – Nutrition Office that enables health workers to pin, edit, and remove location markers representing children screened for malnutrition, with visual status indicators per household.',
+    problem: 'Barangay nutrition workers relied on manual paper maps and spreadsheets to track household locations and malnutrition status of monitored children, making it difficult to visualize geographic distribution or identify high-risk areas quickly.',
+    solution: "Built an interactive map application where authorized users can add, edit, and delete location pins for each child record. Each pin visually encodes the child's malnutrition status using color-coded markers, providing health officials with an at-a-glance geographic overview of community nutritional health.",
+    features: [
+      'Interactive map with custom pin placement for each child household',
+      'Color-coded status markers indicating malnutrition severity levels',
+      'Add, edit, and delete pin functionality with confirmation dialogs',
+      'Child record details viewable on pin click (name, age, status, barangay)',
+      'Role-based access for health workers and administrators'
+    ],
+    technologies: ['PHP', 'JavaScript', 'Leaflet.js', 'MySQL', 'CSS3'],
+    challenges: 'Integrating an open-source map library with a server-side PHP backend while ensuring that pin state changes were reliably persisted to the database and reflected in real-time without page reloads.',
+    lessonsLearned: 'Gained experience with geospatial web mapping libraries (Leaflet.js), civic/health data systems, and designing UI for non-technical government field workers with low digital literacy.',
+    githubUrl: 'https://github.com/PJasper14/SpotMap',
     liveUrl: '#'
   },
   {
@@ -302,7 +348,7 @@ export const EDUCATION_DATA: EducationItem = {
     'Human-Computer Interaction'
   ],
   achievements: [
-    'Successfully developed and defended capstone project on Integrated Web & Mobile Management System.',
+    'Successfully developed and defended capstone project on Integrated Web & Mobile EPOL Management System.',
     'Completed 500 hours of IT internship at PESO Cabuyao–Nutrition Office.',
     'Active participant in academic technology seminars and developer workshops.'
   ]

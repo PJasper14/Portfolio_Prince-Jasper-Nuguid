@@ -174,11 +174,8 @@ export const Contact: React.FC = () => {
 
               <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
                 <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Résumé file download initialized. Contact Prince Jasper Nuguid for full document access!");
-                  }}
+                  href="/Nuguid, Prince Jasper_RESUME.pdf"
+                  download="Nuguid, Prince Jasper_RESUME.pdf"
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-slate-900 dark:bg-slate-800 hover:bg-brand-600 dark:hover:bg-brand-600 border border-slate-800 dark:border-slate-700 transition-all active:scale-95"
                 >
                   <Download className="w-4 h-4" />
