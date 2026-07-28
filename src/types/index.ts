@@ -2,7 +2,7 @@ export type ThemeMode = 'dark' | 'light';
 
 export interface SkillItem {
   name: string;
-  category: 'Programming' | 'Frontend' | 'Backend' | 'Mobile' | 'Database' | 'Tools' | 'Other';
+  category: 'Frontend' | 'Backend' | 'Mobile' | 'Database' | 'Tools' | 'Other';
   level?: string;
   iconName?: string;
 }

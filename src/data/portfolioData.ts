@@ -3,12 +3,6 @@ import { CertificationGroup, EducationItem, ExperienceItem, ProjectItem, SkillIt
 export const PERSONAL_INFO = {
   name: "Prince Jasper G. Nuguid",
   primaryHeadline: "Aspiring Software Engineer | Information Technology Graduate",
-  alternateHeadlines: [
-    "Information Technology Graduate",
-    "Entry-Level Software Developer",
-    "Web & Mobile Application Developer",
-    "Software Development Enthusiast"
-  ],
   degree: "Bachelor of Science in Information Technology",
   university: "Pamantasan ng Cabuyao",
   gradYear: "2026",
@@ -26,43 +20,53 @@ Although I am at the beginning of my professional career, I approach software de
 };
 
 export const SKILLS_DATA: SkillItem[] = [
-  // Programming
-  { name: 'JavaScript', category: 'Programming', level: 'Intermediate' },
-  { name: 'TypeScript', category: 'Programming', level: 'Intermediate' },
-  { name: 'PHP', category: 'Programming', level: 'Intermediate' },
-  { name: 'Java', category: 'Programming', level: 'Foundational' },
-  { name: 'SQL', category: 'Programming', level: 'Intermediate' },
+  // Languages (moved from Programming, placed under appropriate sections below)
 
   // Frontend
-  { name: 'React', category: 'Frontend', level: 'Intermediate' },
-  { name: 'HTML5', category: 'Frontend', level: 'Advanced' },
-  { name: 'CSS3', category: 'Frontend', level: 'Advanced' },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 'Intermediate' },
+  { name: 'HTML5', category: 'Frontend' },
+  { name: 'CSS3', category: 'Frontend' },
+  { name: 'JavaScript', category: 'Frontend' },
+  { name: 'TypeScript', category: 'Frontend' },
+  { name: 'React', category: 'Frontend' },
+  { name: 'Angular', category: 'Frontend' },
+  { name: 'Vue', category: 'Frontend' },
+  { name: 'Next.js', category: 'Frontend' },
+  { name: 'Vite', category: 'Frontend' },
+  { name: 'Tailwind CSS', category: 'Frontend' },
+  { name: 'Bootstrap', category: 'Frontend' },
 
   // Backend
-  { name: 'Laravel', category: 'Backend', level: 'Intermediate' },
-  { name: 'REST API Design', category: 'Backend', level: 'Intermediate' },
+  { name: 'PHP', category: 'Backend' },
+  { name: 'Python', category: 'Backend' },
+  { name: 'Java', category: 'Backend' },
+  { name: 'Node.js', category: 'Backend' },
+  { name: 'Laravel', category: 'Backend' },
+  { name: 'GraphQL', category: 'Backend' },
 
   // Mobile
-  { name: 'React Native', category: 'Mobile', level: 'Intermediate' },
+  { name: 'React Native', category: 'Mobile' },
+  { name: 'Flutter', category: 'Mobile' },
+  { name: 'Dart', category: 'Mobile' },
 
   // Database
-  { name: 'MySQL', category: 'Database', level: 'Intermediate' },
+  { name: 'MySQL', category: 'Database' },
+  { name: 'SQLite', category: 'Database' },
+  { name: 'MongoDB', category: 'Database' },
 
   // Tools
-  { name: 'Git', category: 'Tools', level: 'Intermediate' },
-  { name: 'GitHub', category: 'Tools', level: 'Intermediate' },
-  { name: 'VS Code', category: 'Tools', level: 'Advanced' },
-  { name: 'Figma', category: 'Tools', level: 'Intermediate' },
-  { name: 'Canva', category: 'Tools', level: 'Advanced' },
-  { name: 'Microsoft Office', category: 'Tools', level: 'Advanced' },
+  { name: 'Git', category: 'Tools' },
+  { name: 'GitHub', category: 'Tools' },
+  { name: 'VS Code', category: 'Tools' },
+  { name: 'Figma', category: 'Tools' },
+  { name: 'Canva', category: 'Tools' },
+  { name: 'Microsoft Office', category: 'Tools' },
 
   // Other
-  { name: 'Computer Networking', category: 'Other', level: 'Foundational' },
-  { name: 'Technical Troubleshooting', category: 'Other', level: 'Intermediate' },
-  { name: 'IT Support', category: 'Other', level: 'Intermediate' },
-  { name: 'Graphic Design', category: 'Other', level: 'Intermediate' },
-  { name: 'System Analysis & Design', category: 'Other', level: 'Intermediate' },
+  { name: 'Computer Networking', category: 'Other' },
+  { name: 'Technical Troubleshooting', category: 'Other' },
+  { name: 'IT Support', category: 'Other' },
+  { name: 'Graphic Design', category: 'Other' },
+  { name: 'System Analysis & Design', category: 'Other' },
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
@@ -91,30 +95,62 @@ export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: 'integrated-mgmt-system',
     title: 'Integrated Web & Mobile EPOL Management System',
-    tagline: 'Comprehensive enterprise operational suite with biometric authentication and geofenced attendance tracking.',
-    category: 'Full-Stack & Mobile',
+    tagline: 'Capstone project — Comprehensive enterprise operational suite with biometric authentication and geofenced attendance tracking.',
+    category: 'Full-Stack & Mobile (Capstone Project)',
     featured: true,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    overview: 'A robust multi-module management solution engineered to unify organizational workflow, employee tracking, inventory oversight, and incident reporting across both web dashboard and mobile application platforms.',
-    problem: 'Organizations often struggle with fragmented administrative systems, manual attendance logging prone to proxy punching, delayed inventory reconciliation, and inefficient incident reporting.',
-    solution: 'Built a centralized Web & Mobile system powered by a unified REST API, integrating biometric fingerprint authentication and GPS geofencing to validate employee check-ins and streamline operational records.',
+    overview: 'Capstone project developed as the culminating requirement for a Bachelor of Science in Information Technology. A robust three-component system — Laravel REST API backend, Next.js 15 admin web portal, and an Expo React Native mobile app — engineered to unify field officer attendance, incident reporting, inventory management, validation workflows, and team assignment tracking for Environment Rescue Service (ERS) operations.',
+    problem: 'Field operations teams struggled with manual paper-based attendance prone to proxy punching, fragmented inventory tracking, delayed incident reporting, and no real-time visibility into officer locations or team assignment status. Operations became critical when officers were deployed in areas with unreliable network connectivity.',
+    solution: 'Built a centralized three-component architecture: (1) Laravel 12 REST API backend with Sanctum authentication, (2) Next.js 15 admin web dashboard, and (3) React Native mobile app via Expo SDK 54. Integrated biometric fingerprint authentication (expo-local-authentication), GPS geofencing (expo-location + react-native-maps), offline queue synchronization (AsyncStorage + custom SyncService), push notifications, and real-time in-app notification bubbles with scheduled missing validation checks.',
     modules: [
-      'Attendance Management (Biometric & Geofenced)',
-      'Inventory & Asset Tracking',
-      'Employee Directory & Account Management',
-      'Incident & Issue Reporting Pipeline',
-      'Role-based Access Control (RBAC)'
+      'Attendance Management (Biometric & Geofenced Check-In/Out)',
+      'Incident & Issue Reporting with Photo/Video Attachments',
+      'Inventory & Equipment Distribution with Request Workflows',
+      'Employee Directory & Team Assignment Management',
+      'Validation Workflows (Team Leader Approval with Late/Missing Alerts)',
+      'Role-based Access Control (Admin, Team Leader, Sub-Team Leader, Field Officer)',
+      'Offline Queue & Sync Engine',
+      'Real-time Notification System (In-App Bubbles + Push)',
+      'Password Reset & Account Management',
+      'PDF Export for DTR, Attendance Reports, and Safeguarding Records'
     ],
     features: [
-      'Biometric Fingerprint Authentication integration for tamper-proof attendance',
-      'GPS Geofencing to verify physical location during mobile check-ins',
-      'Real-time inventory level alerts and stock movement history',
-      'Interactive incident reporting pipeline with priority status tracking',
-      'Responsive admin web portal and cross-platform mobile companion app'
+      'Biometric Fingerprint Authentication (expo-local-authentication)',
+      'GPS Geofencing with React Native Maps and Leaflet.js (web)',
+      'Offline queue with AsyncStorage and auto-sync on reconnection',
+      'Real-time in-app notification bubbles with 10-second polling',
+      'Push notifications and scheduled Laravel commands for missing validations',
+      'Multi-role workflows: Admin, Team Leader, Sub-Team Leader, Field Officer',
+      'Inventory request, distribution, and return tracking',
+      'Incident reporting with image/video capture (expo-image-picker)',
+      'PDF generation for DTR and attendance reports (jsPDF + jspdf-autotable)',
+      'Responsive admin web portal with Next.js 15, Tailwind CSS, and Radix UI'
     ],
-    technologies: ['React', 'React Native', 'Laravel', 'MySQL', 'REST API', 'Tailwind CSS'],
-    challenges: 'Ensuring real-time synchronization between the mobile app and backend API while handling network latency in field conditions, alongside integrating hardware biometric SDK protocols.',
-    lessonsLearned: 'Mastered REST API contract design, mobile state management with React Native, geofencing boundary calculations, and database indexing for high-frequency attendance logging.',
+    technologies: [
+      'React Native',
+      'Expo SDK 54',
+      'Next.js 15',
+      'React',
+      'TypeScript',
+      'Laravel 12',
+      'PHP 8.2',
+      'Laravel Sanctum',
+      'MySQL',
+      'React Navigation',
+      'React Native Maps',
+      'Leaflet.js',
+      'Expo Location',
+      'Expo Local Authentication',
+      'Expo Image Picker',
+      'AsyncStorage',
+      'Radix UI',
+      'Tailwind CSS',
+      'jsPDF',
+      'React Hook Form',
+      'Zod'
+    ],
+    challenges: 'Engineering a reliable offline-first mobile architecture that queues attendance, inventory requests, and incident reports when network is unavailable, then syncs intelligently on reconnection without data loss or duplicate submissions. Implementing accurate GPS geofencing validation for attendance with device location permission variability across Android and iOS. Designing a scalable Laravel Sanctum token-based auth system shared across web and mobile platforms while maintaining session security.',
+    lessonsLearned: 'Mastered offline-first mobile app patterns with AsyncStorage-backed queue services and sync reconciliation logic. Gained deep experience with Expo managed workflows, biometric APIs, geolocation services, and push notification setup across platforms. Learned Laravel Sanctum multi-guard authentication, scheduled artisan commands for background jobs (missing validation alerts), and Laravel REST API design with pagination, filtering, and real-time polling endpoints. Strengthened skills in React Native navigation (stack + drawer), React context state management, and building production-grade full-stack systems with comprehensive user role management.',
     githubUrl: 'https://github.com/PJasper14',
     liveUrl: '#'
   },
@@ -145,22 +181,22 @@ export const PROJECTS_DATA: ProjectItem[] = [
     id: 'coffee-shop-sap',
     title: 'SAP Coffee Shop Management System',
     tagline: 'Point-of-sale and inventory management solution built for a local coffee shop business.',
-    category: 'Desktop Application',
+    category: 'Web Application',
     featured: true,
     image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80',
-    overview: 'A business management application designed for a local coffee shop, providing streamlined order processing, inventory tracking, and sales reporting in a single integrated desktop solution.',
-    problem: 'Local coffee shops operating manually struggle with inefficient order taking, inaccurate inventory counts, and no clear visibility into daily sales performance or profit trends.',
-    solution: 'Developed a complete point-of-sale and back-office management system that digitizes order processing, automates inventory deduction per sale, and generates visual sales reports for the business owner.',
+    overview: 'A single-page React application built as an academic lab project for ITP110 (Web Technologies), presenting a fully interactive coffee shop website with smooth scroll navigation, dynamic menu filtering, and a responsive layout.',
+    problem: 'Academic requirement to demonstrate Single Page Application (SPA) architecture using React, implementing component-based design, state management, and seamless section navigation without page reloads.',
+    solution: 'Built a complete Coffee Haven SPA in React with five content sections — Home, About, Menu, Contact, and Gallery — using Bootstrap for responsive styling and Vite as the build tool.',
     features: [
-      'Point-of-sale interface for fast order entry and billing',
-      'Product catalog management with category organization',
-      'Real-time inventory deduction and low-stock alerts',
-      'Daily, weekly, and monthly sales reports with visual charts',
-      'Transaction history and receipt generation'
+      'Single Page Application with all 5 sections on one scrollable page',
+      'Sticky header with active section highlighting based on scroll position',
+      'Dynamic menu category filtering (Hot Coffee, Cold Brew, Pastries) using React state',
+      'Interactive contact form with validation and submission feedback',
+      'Fully mobile-responsive design with Bootstrap 5 grid and custom CSS animations'
     ],
-    technologies: ['Java', 'MySQL', 'NetBeans IDE', 'JFreeChart'],
+    technologies: ['React', 'Vite', 'Bootstrap 5', 'CSS3'],
     challenges: 'Designing an intuitive POS interface that non-technical staff could operate efficiently under high-volume rush hours, while maintaining accurate inventory synchronization after every transaction.',
-    lessonsLearned: 'Strengthened understanding of Java desktop GUI development, relational database design for transactional systems, and applying business process analysis to real-world software requirements.',
+    lessonsLearned: 'Strengthened understanding of React SPA architecture, component-based design, smooth scroll navigation, state management with React Hooks, and responsive web design with Bootstrap.',
     githubUrl: 'https://github.com/PJasper14/SAP_CoffeShop_Nuguid',
     liveUrl: '#'
   },
@@ -181,11 +217,42 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Child record details viewable on pin click (name, age, status, barangay)',
       'Role-based access for health workers and administrators'
     ],
-    technologies: ['PHP', 'JavaScript', 'Leaflet.js', 'MySQL', 'CSS3'],
-    challenges: 'Integrating an open-source map library with a server-side PHP backend while ensuring that pin state changes were reliably persisted to the database and reflected in real-time without page reloads.',
-    lessonsLearned: 'Gained experience with geospatial web mapping libraries (Leaflet.js), civic/health data systems, and designing UI for non-technical government field workers with low digital literacy.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'MapLibre GL', 'Tailwind CSS', 'jsPDF', 'html2canvas'],
+    challenges: 'Integrating an interactive map library (MapLibre GL) within a Next.js environment while ensuring that pin state changes were reliably persisted and reflected in real-time, and implementing PDF export of map views for health worker reporting.',
+    lessonsLearned: 'Gained experience with geospatial web mapping libraries (MapLibre GL), Next.js app routing, civic/health data systems, PDF generation with jsPDF and html2canvas, and designing UI for non-technical government field workers with low digital literacy.',
     githubUrl: 'https://github.com/PJasper14/SpotMap',
     liveUrl: '#'
+  },
+  {
+    id: 'ccs-profiling-system',
+    title: 'CCS Profiling System',
+    tagline: 'Full-stack student profiling platform for the College of Computer Studies with data export and role-based access.',
+    category: 'Full-Stack Web Application',
+    featured: true,
+    image: 'https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1200&q=80',
+    overview: 'A collaborative full-stack web application built for the College of Computer Studies (CCS) to manage and profile student and faculty records across three distinct user roles — Admin, Faculty, and Student — each with dedicated dashboards, login flows, and access-controlled features.',
+    problem: 'Student and faculty profiling within a college department was managed through disconnected spreadsheets and manual records, making it difficult to consolidate data, track academic status across roles, and generate reports efficiently.',
+    solution: 'Developed a centralized profiling system with a React SPA frontend and Laravel REST API backend supporting three POVs: an Admin dashboard for full data oversight, a Faculty dashboard for class and student management, and a Student dashboard for personal profile access. Secured with Laravel Sanctum token-based auth and Cloudinary-powered file uploads.',
+    modules: [
+      'Admin POV – Full dashboard with student/faculty CRUD, scheduling, events, instructions, and data export',
+      'Faculty POV – Faculty dashboard with assigned student records and profile management',
+      'Student POV – Student dashboard for personal profile viewing and updates'
+    ],
+    features: [
+      'Three-role system: Admin, Faculty, and Student — each with separate login, signup, and dashboard',
+      'Admin dashboard with modules for Users, Reports, Scheduling, Events, and Instructions',
+      'Student and Faculty profile management with Cloudinary image uploads',
+      'Data export to PDF (jsPDF + jspdf-autotable) and Excel (ExcelJS) formats',
+      'Bulk ZIP download of exported records using JSZip',
+      'Secure API authentication with Laravel Sanctum token-based auth',
+      'Email notifications via Symfony Brevo mailer integration',
+      'Dark mode support and responsive SPA navigation with React Router DOM'
+    ],
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Laravel', 'PHP', 'Laravel Sanctum', 'MySQL', 'Cloudinary', 'jsPDF', 'ExcelJS', 'REST API'],
+    challenges: 'Coordinating frontend and backend development across a team while maintaining a consistent REST API contract for three distinct user roles, and implementing reliable multi-format data export (PDF, Excel, ZIP) with shared data fetching optimized via a custom caching layer.',
+    lessonsLearned: 'Gained experience in team-based full-stack collaboration, multi-role authentication flows with Laravel Sanctum, Cloudinary media management, shared state architecture across role-based layouts, and comprehensive data export pipelines for institutional web applications.',
+    githubUrl: 'https://github.com/Sarino-Nhoel-Ivan/CCS-ProfilingSystem',
+    liveUrl: 'https://ccs-profiling-system-sigma.vercel.app'
   },
   {
     id: 'personal-portfolio',
@@ -341,15 +408,23 @@ export const EDUCATION_DATA: EducationItem = {
     'Web Systems & Technologies',
     'Application Development & Emerging Technologies',
     'Object-Oriented Programming',
+    'Data Structures & Algorithms',
     'Database Management Systems',
     'Software Engineering & System Analysis',
     'Mobile Computing',
     'Computer Networks & Security',
-    'Human-Computer Interaction'
+    'Human-Computer Interaction',
+    'Information Management',
+    'Systems Integration & Architecture',
+    'IT Infrastructure & Virtualization',
+    'Technopreneurship',
+    'Professional Ethics in IT'
   ],
   achievements: [
     'Successfully developed and defended capstone project on Integrated Web & Mobile EPOL Management System.',
     'Completed 500 hours of IT internship at PESO Cabuyao–Nutrition Office.',
-    'Active participant in academic technology seminars and developer workshops.'
+    'Active participant in academic technology seminars and developer workshops.',
+    'Earned multiple industry-recognized certifications from Cisco, IBM, Google, and TESDA covering cybersecurity, cloud computing, AI, web development, and UX/UI design.',
+    'Continuously pursued self-directed learning through online certification programs to expand technical expertise beyond the academic curriculum.'
   ]
 };

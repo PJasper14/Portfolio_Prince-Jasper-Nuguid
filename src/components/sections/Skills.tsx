@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Layout, Server, Smartphone, Database, Wrench, Cpu, CheckCircle } from 'lucide-react';
+import { Code, Layout, Server, Smartphone, Database, Wrench, Cpu } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { SKILLS_DATA } from '../../data/portfolioData';
+import { TechIcon } from '../ui/TechIcon';
 
 const CATEGORIES = [
   { name: 'All', icon: Code },
-  { name: 'Programming', icon: Code },
   { name: 'Frontend', icon: Layout },
   { name: 'Backend', icon: Server },
   { name: 'Mobile', icon: Smartphone },
@@ -69,22 +69,21 @@ export const Skills: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 whileHover={{ y: -4 }}
-                className="p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 hover:shadow-lg transition-all group"
+                className="p-4 rounded-xl glass-card border border-slate-200 dark:border-slate-800 flex flex-col gap-2 hover:border-brand-500/50 hover:shadow-lg transition-all group"
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] uppercase tracking-wider font-mono font-semibold text-brand-600 dark:text-skyAccent-400">
+                {/* Icon + category row */}
+                <div className="flex items-center justify-between">
+                  <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                    <TechIcon name={skill.name} size={18} colored />
+                  </div>
+                  <span className="text-[9px] uppercase tracking-wider font-mono font-bold text-brand-600 dark:text-skyAccent-400">
                     {skill.category}
                   </span>
-                  <CheckCircle className="w-3.5 h-3.5 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-skyAccent-400 transition-colors">
+                {/* Skill name */}
+                <div className="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-skyAccent-400 transition-colors leading-tight">
                   {skill.name}
                 </div>
-                {skill.level && (
-                  <div className="mt-2 pt-2 border-t border-slate-200/50 dark:border-slate-800/50 text-[10px] text-slate-500 dark:text-slate-400 font-mono">
-                    {skill.level}
-                  </div>
-                )}
               </motion.div>
             ))}
           </AnimatePresence>

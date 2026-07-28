@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Copy, Check, ExternalLink, Github, Linkedin, Briefcase, Download, MapPin, Sparkles, Clock, ArrowUpRight } from 'lucide-react';
+import { Mail, Copy, Check, ExternalLink, Github, Linkedin, Briefcase, Download, MapPin, Sparkles, ArrowUpRight } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
@@ -54,10 +54,6 @@ export const Contact: React.FC = () => {
               <div className="flex items-center gap-1.5 font-medium">
                 <MapPin className="w-4 h-4 text-brand-600 dark:text-skyAccent-400 shrink-0" />
                 <span>{PERSONAL_INFO.location}</span>
-              </div>
-              <div className="flex items-center gap-1.5 font-medium">
-                <Clock className="w-4 h-4 text-brand-600 dark:text-skyAccent-400 shrink-0" />
-                <span>Fast response within 24 hours</span>
               </div>
             </div>
           </motion.div>
