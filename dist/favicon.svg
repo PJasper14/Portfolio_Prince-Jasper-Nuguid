@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="24" fill="#0F172A"/>
+  <path d="M30 70V30L52 52L30 70Z" fill="#2563EB"/>
+  <path d="M70 70V30L48 52L70 70Z" fill="#38BDF8"/>
+  <text x="50" y="62" font-family="Outfit, sans-serif" font-weight="800" font-size="38" fill="#FFFFFF" text-anchor="middle">PN</text>
+</svg>

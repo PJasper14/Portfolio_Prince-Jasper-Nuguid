@@ -1,0 +1,130 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Download, Mail, Sparkles, Code2, GraduationCap } from 'lucide-react';
+import { PERSONAL_INFO } from '../../data/portfolioData';
+import { TechIllustration } from '../ui/TechIllustration';
+
+export const Hero: React.FC = () => {
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - navOffset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <section id="hero" className="relative min-h-[90vh] pt-32 pb-20 flex items-center justify-center overflow-hidden bg-grid-pattern">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-skyAccent-400/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* Left Hero Text Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 flex flex-col items-start text-left"
+          >
+            {/* Status Pill */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-600 dark:text-skyAccent-400 border border-brand-500/20 mb-6">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Available for Entry-Level Software Engineering Roles</span>
+            </div>
+
+            {/* Name Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
+              Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
+            </h1>
+
+            {/* Sub-headline */}
+            <h2 className="mt-3 text-xl sm:text-2xl font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+              <GraduationCap className="w-6 h-6 text-brand-600 dark:text-skyAccent-400 shrink-0" />
+              <span>{PERSONAL_INFO.primaryHeadline}</span>
+            </h2>
+
+            {/* Summary narrative */}
+            <p className="mt-5 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
+              {PERSONAL_INFO.summary}
+            </p>
+
+            {/* Quick Tech Tag Badges */}
+            <div className="mt-6 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mr-2">Core Tech:</span>
+              {['React', 'TypeScript', 'Laravel', 'React Native', 'MySQL', 'Tailwind CSS'].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-200/60 dark:bg-slate-800/60 text-slate-800 dark:text-slate-200 border border-slate-300/40 dark:border-slate-700/50"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+              <button
+                onClick={() => handleScroll('projects')}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-500 hover:to-brand-600 shadow-lg shadow-brand-600/25 hover:shadow-glow-primary transition-all duration-200 active:scale-95"
+              >
+                <span>View Featured Projects</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScroll('contact');
+                }}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-800 dark:text-slate-100 bg-slate-200/80 dark:bg-slate-800/80 hover:bg-slate-300 dark:hover:bg-slate-700 border border-slate-300/50 dark:border-slate-700/50 transition-all duration-200 active:scale-95"
+              >
+                <Download className="w-4 h-4 text-brand-600 dark:text-skyAccent-400" />
+                <span>Download Resume</span>
+              </a>
+
+              <button
+                onClick={() => handleScroll('contact')}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Contact Me</span>
+              </button>
+            </div>
+
+            {/* Trust Footer */}
+            <div className="mt-10 pt-6 border-t border-slate-200/80 dark:border-slate-800/60 flex items-center gap-6 text-xs text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2">
+                <Code2 className="w-4 h-4 text-brand-600 dark:text-skyAccent-400" />
+                <span>Modern Web & Mobile Stack</span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-slate-400 dark:bg-slate-600" />
+              <div>
+                <span>Pamantasan ng Cabuyao Alum</span>
+              </div>
+            </div>
+
+          </motion.div>
+
+          {/* Right Hero Graphic Column */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="lg:col-span-5 flex justify-center"
+          >
+            <TechIllustration />
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
